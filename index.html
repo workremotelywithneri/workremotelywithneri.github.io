@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>The ESL Toolkit has moved</title>
+<script>
+  // Old links like /esl-toolkit/build-a-pizza.html go to the same page on the new site.
+  (function () {
+    var NEW_SITE = "https://esltoolkit-byneri.netlify.app";
+    var path = location.pathname.replace(/^\/esl-toolkit(\/|$)/, "/");
+    location.replace(NEW_SITE + path + location.search + location.hash);
+  })();
+</script>
+<meta http-equiv="refresh" content="1; url=https://esltoolkit-byneri.netlify.app/">
+<style>
+  body { margin:0; min-height:100vh; display:grid; place-items:center; background:#14112a; color:#eee;
+         font:16px/1.5 system-ui, sans-serif; text-align:center; padding:16px; }
+  a { color:#b9a3ff; }
+</style>
+</head>
+<body>
+  <p>The ESL Toolkit has moved.<br>
+  Taking you there now… <a href="https://esltoolkit-byneri.netlify.app/">Click here</a> if nothing happens.</p>
+</body>
+</html>
