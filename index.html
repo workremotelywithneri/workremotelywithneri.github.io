@@ -5,14 +5,25 @@
 <meta name="robots" content="noindex">
 <title>The ESL Toolkit has moved</title>
 <script>
-  // Old links like /esl-toolkit/build-a-pizza.html go to the same page on the new site.
+  // Preserve verified destination paths; unknown old links go to the homepage.
   (function () {
-    var NEW_SITE = "https://esltoolkit-byneri.netlify.app";
+    var NEW_SITE = "https://esltoolkit.madebyneri.com";
     var path = location.pathname.replace(/^\/esl-toolkit(\/|$)/, "/");
+    var supportedPaths = [
+      "/", "/games/", "/guide/", "/companies/", "/resources/",
+      "/teacher-development/", "/privacy/", "/discover-games/",
+      "/find-the-ball-v2.html", "/TICTACTOE-improved.html",
+      "/Build-Your-Ice-Cream-free-decorating-v3.3.html",
+      "/gumball-reading-machine-v2.html", "/build-a-pizza.html",
+      "/build-a-burger-v2.html", "/build-an-aquarium.html", "/spin-the-wheel-v3.html"
+    ];
+    path = path.replace(/\/index\.html$/, "/");
+    if (supportedPaths.indexOf(path + "/") !== -1) path += "/";
+    if (supportedPaths.indexOf(path) === -1) path = "/";
     location.replace(NEW_SITE + path + location.search + location.hash);
   })();
 </script>
-<meta http-equiv="refresh" content="1; url=https://esltoolkit-byneri.netlify.app/">
+<meta http-equiv="refresh" content="1; url=https://esltoolkit.madebyneri.com/">
 <style>
   body { margin:0; min-height:100vh; display:grid; place-items:center; background:#14112a; color:#eee;
          font:16px/1.5 system-ui, sans-serif; text-align:center; padding:16px; }
@@ -21,6 +32,6 @@
 </head>
 <body>
   <p>The ESL Toolkit has moved.<br>
-  Taking you there now… <a href="https://esltoolkit-byneri.netlify.app/">Click here</a> if nothing happens.</p>
+  Taking you there now… <a href="https://esltoolkit.madebyneri.com/">Click here</a> if nothing happens.</p>
 </body>
 </html>
